@@ -1,0 +1,125 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* src/App.css */
+
+/* --- General Navigation Styles --- */
+.main-nav {
+  margin-bottom: 20px; /* Space below the navigation */
+  background-color: #333; /* Dark background for the nav bar */
+  padding: 10px 20px; /* Some padding around the nav content */
+  border-radius: 8px; /* Slightly rounded corners */
+   /* --- NEW STYLES FOR STICKY NAVBAR --- */
+  position: fixed; /* Makes the element stick relative to the viewport */
+  top: 0;          /* Aligns it to the top edge of the viewport */
+  left: 0;         /* Aligns it to the left edge of the viewport */
+  width: 100%;     /* Makes it span the full width of the viewport */
+  z-index: 1000;   /* Ensures it stays on top of other content when scrolling */
+  border-radius: 0; /* Optional: Remove border-radius if you want it to span edge-to-edge */
+  /* Optional: Add a subtle shadow for better visual separation */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.main-nav ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Make links sit next to each other */
+  gap: 30px; /* Space between the links */
+  justify-content: start; /* Center the links horizontally */
+  align-items: center;
+}
+
+.main-nav li {
+  /* No specific styles needed for li usually, as styling is on the Link/a tag */
+}
+
+/* --- Link (a tag) Styles --- */
+.main-nav a {
+  color: #fff; /* White text color for links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.2em; /* Slightly larger font size */
+  font-weight: bold; /* Make text bold */
+  padding: 8px 15px; /* Padding inside the link box */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+  border-radius: 5px; /* Slightly rounded corners for link background */
+}
+
+.main-nav a:hover {
+  color: #61dafb; /* React blue on hover */
+  background-color: rgba(236, 138, 255, 0.1); /* Slight background on hover */
+}
+
+/* --- Style for the currently active link (if using NavLink from react-router-dom) --- */
+/*
+If you switch from <Link> to <NavLink> in App.jsx (e.g., <NavLink to="/" className={({ isActive }) => isActive ? 'active-link' : ''}>Home</NavLink>),
+you can use this to style the active page:*/
+ .main-nav .active-link {
+  color: #8A2BE2;  /* A different color for the active link */
+  background-color: #eeeeee;
+  /*border-bottom: 5px solid #9055b8;  A line under the active link */
+  padding: 3px 10px; /* Adjusting padding values here */
+  border-radius: 5px;
+  box-shadow: 0 4px 0 0 #9055b8; /* The first value is x-offset, second is y-offset (4px down), third is blur, fourth is spread */
+}
+
+.page-content-wrapper {
+  padding-top: 60px; /* Adjust this value to be equal to or slightly more than your navbar's actual height */
+  /* You can also reset the margin-bottom from .main-nav if you still have it */
+  margin-top: 0; /* Ensure no extra space above content */
+}
+
+/* src/style/App.css */
+.spotify-player-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* margin: auto; */
+  margin-left: 6px;
+  margin-bottom: 0px;
+  z-index: 1000;
+  width: 20%; /* You must define a width for this to work */
+  /* box-shadow: inset; */
+}

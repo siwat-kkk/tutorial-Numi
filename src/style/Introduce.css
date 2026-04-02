@@ -1,0 +1,58 @@
+/* src/Introduce.css */
+
+/* .introduce-heading{ */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-size: 2.5rem; */
+  /* font-weight: bold; */
+  /* color: #b4b4b4; */
+  /* text-align: center; */
+  /* text-transform: uppercase; */
+  /* letter-spacing: 2px; */
+/* } */
+
+/* .introduce-heading::first-letter { */
+  /* font-size: 3em;           Makes the first letter 3 times larger */
+  /* font-weight: bold;        Makes it bold */
+  /* float: left;              Causes the rest of the text to wrap around it */
+  /* line-height: 1;           Adjusts the vertical spacing */
+  /* padding-right: 10px;      Adds some space between the letter and the text */
+  /* color: #b4b4b4;           Gives it a different color */
+/* } */
+
+/* .introduce-heading .rest-of-name { */
+  /* This is the key property to align it with the bottom */
+  /* vertical-align: bottom; */
+  /* display: inline-block; ||We need this for vertical-align to work */
+  /* font-size: 1em;        ||You can adjust this if the size is wrong */
+  /* text-transform: uppercase; */
+/* } */
+
+.introduce-heading {
+  /* This rule is fine, but you can remove the text-transform: uppercase; if you want
+     to control it manually on the rest of the name */
+  font-family: Georgia, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+/* New rule for the first letter */
+.introduce-heading .first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ce8af5;
+  line-height: 1; /* You may adjust this value */
+  margin-right: 0px; /* Use a margin to create space, replacing the old padding */
+  display: inline-block; /* Crucial for alignment */
+}
+
+/* New rule for the rest of the name */
+.introduce-heading .rest-of-name {
+  font-size: 1em; 
+  text-transform: uppercase;
+  /* This is the key property to align it with the bottom */
+  vertical-align: baseline;
+  display: inline-block; /* Crucial for alignment */
+}
