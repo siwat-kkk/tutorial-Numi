@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import "./style/Album.css";
 
 function Album() {
-  const youTubeAPIKey = "AIzaSyAAfafagvgnAADhXF-VlBxvezNRvGGZpa8";
+  const youTubeAPIKey = import.meta.env.VITE_YOUTUBE_API_KEY;
   const albums = [
     {
       name: "Sun Always Sets",
@@ -192,15 +192,16 @@ function Album() {
         <div className="custom-playlist">
           {activeVideoId && (
             <div className="main-player-container">
-              <iframe
-                width="860"
-                height="540"
-                src={`https://www.youtube.com/embed/${activeVideoId}`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+  <iframe
+    width="540"
+    height="540"
+    src={`https://www.youtube.com/embed/${activeVideoId}`}
+    title="YouTube video player" // แนะนำให้เพิ่ม title เพื่อความถูกต้องของ HTML
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
           )}
 
           <div className="song-list">

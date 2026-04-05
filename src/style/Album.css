@@ -103,7 +103,7 @@
   font-family: Georgia, Helvetica, sans-serif;
   font-size: 2.5rem;
   font-weight: normal;
-  color: #6B5C7B;
+  color: #e0e0e0;
   text-align: center;
   letter-spacing: 2px;
 }
@@ -238,60 +238,24 @@
   cursor: not-allowed;
 }
 
-.album-showcase-container {
-  padding: 40px;
-  max-width: 1400px;
-  margin: 0 auto;
-  color: white;
+.main-player-container {
+  width: 540px;
+  height: 540px;
+  /* 1. กำหนดความโค้งที่นี่ */
+  border-radius: 8px; 
+  
+  /* 2. บังคับให้เนื้อหา (iframe) ที่เกินขอบโค้งถูกตัดออก */
+  overflow: hidden; 
+  
+  /* 3. ลบขอบขาวๆ หรือเงาที่อาจจะติดมากับ iframe */
+  border: none;
+  
+  /* แถม: เพิ่มเงาให้ดูมีมิติเหมือนใน Design ล่าสุด */
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* แบ่งหน้าจอเป็น 2 ฝั่ง: ซ้าย 60% ขวา 40% (หรือตามความเหมาะสม) */
-.main-content {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr; 
-  gap: 30px;
-  margin-top: 30px;
-}
-
-/* ฝั่งซ้าย: จัดกลุ่มปกกับลิสต์เพลง */
-.focus-section {
-  display: flex;
-  gap: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.player-wrapper {
-  flex: 1; /* ให้พื้นที่ปกเพลง */
-}
-
-.tracklist-wrapper {
-  flex: 1.2; /* ให้พื้นที่ลิสต์เพลงกว้างกว่านิดนึง */
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 15px;
-}
-
-/* ฝั่งขวา: Album Grid */
-.library-section {
-  max-height: 600px;
-  overflow-y: auto; /* ให้เลื่อนดูอัลบั้มได้ถ้ามีเยอะ */
-}
-
-.album-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 15px;
-}
-
-.grid-item {
-  aspect-ratio: 1/1;
-  background: #333;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.main-player-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
